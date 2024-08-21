@@ -24,7 +24,7 @@ This resource can be anything, from a written doc to an interactive tutorial. Wh
 - [Docker Sample Voting App](https://github.com/dockersamples/example-voting-app)
 
 ## Groups
-- Metrics: Clinton, Kyle, Yashashree
+- Metrics: Klinton, Kyle, Yashashree
 - Events: Justin, Luis
 - Logs: Bella, Amy
 - Traces: Tommy, Emily, Seline
