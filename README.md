@@ -21,6 +21,47 @@ This resource can be anything, from a written doc to an interactive tutorial. Wh
 
 ## Sample Applications
 - [OpenTelemetry Demo App](https://github.com/open-telemetry/opentelemetry-demo)
+  If you want to utilize the demo app, you can instrument it with New Relic by pasting this in the `otel-config-extras.yml` file:
+```
+# SPDX-License-Identifier: Apache-2.0
+
+# extra settings to be merged into OpenTelemetry Collector configuration
+# do not delete this file
+
+## Example configuration for sending data to your own OTLP HTTP backend
+## Note: the spanmetrics exporter must be included in the exporters array
+## if overriding the traces pipeline.
+##
+#  exporters:
+#    otlphttp/example:
+#      endpoint: <your-endpoint-url>
+#
+#  service:
+#    pipelines:
+#      traces:
+#        exporters: [spanmetrics, otlphttp/example]
+exporters:
+  otlp/newrelic:
+    endpoint: https://otlp.nr-data.net:4317
+    headers:
+      api-key: #New Relic License Key Here
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp/newrelic]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp/newrelic]
+    logs:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp/newrelic]
+
+```
 - [Docker Sample Voting App](https://github.com/dockersamples/example-voting-app)
 
 ## Groups
