@@ -16,7 +16,15 @@ You'll create a repository for your group. Each repository should, at a minimum,
 This resource can be anything, from a written doc to an interactive tutorial. Whatever feels comfortable for you and your group to present this information works. This is meant to be a fun activity, and as students, you have a unique point of view that can help fellow students understand why observability should be a part of their toolkit.
 
 ## Resources
-[New Relic Docs](https://docs.newrelic.com/)
-[New Relic Blog](https://newrelic.com/blog)
+- [New Relic Docs](https://docs.newrelic.com/)
+- [New Relic Blog](https://newrelic.com/blog)
 
 ## Sample Applications
+- [OpenTelemetry Demo App](https://github.com/open-telemetry/opentelemetry-demo)
+- [Docker Sample Voting App](https://github.com/dockersamples/example-voting-app)
+
+## Groups
+- Metrics: Clinton, Kyle, Yashashree
+- Events: Justin, Luis
+- Logs: Bella, Amy
+- Traces: Tommy, Emily, Seline
